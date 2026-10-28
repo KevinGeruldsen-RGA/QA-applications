@@ -100,6 +100,17 @@ body {
   box-shadow: 0 4px 12px rgba(255,77,77,.35);
 }
 
+/* Nested menu link (a sub-page of the item above it) */
+.drawer nav a.sub {
+  margin: -.15rem 0 0 2.1rem; padding: .65rem .9rem; font-size: .92rem;
+  border-left: 2px solid var(--border); border-radius: 0 12px 12px 0;
+}
+.drawer nav a.sub .num {
+  width: 24px; height: 24px; border-radius: 7px; font-size: .75rem;
+  background: var(--panel-2); color: var(--muted);
+  border: 1px solid var(--border); box-shadow: none;
+}
+
 /* ── Header ───────────────────────────────────────────────────────── */
 .page { max-width: 1160px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
 header.masthead { padding: 3rem 0 1rem 96px; }
@@ -115,7 +126,6 @@ header.masthead h1 {
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 header.masthead p  { margin-top: .7rem; color: var(--muted); font-size: 1.12rem; max-width: 46ch; }
-
 /* ── Card grid ────────────────────────────────────────────────────── */
 .grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
