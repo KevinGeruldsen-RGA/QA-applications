@@ -159,6 +159,17 @@ header.masthead p  { margin-top: .7rem; color: var(--muted); font-size: 1.12rem;
 .tool h3 { margin-top: .75rem; font-size: 1.3rem; font-weight: 700; letter-spacing: -.01em; }
 .tool p.summary { margin-top: .55rem; color: var(--muted); font-size: .92rem; }
 
+/* Full-width feature card: image left, text right */
+.tool-wide {
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 2rem; align-items: center;
+  margin-top: 1.75rem; padding: 1.1rem 2rem 1.1rem 1.1rem;
+}
+.tool-wide .thumb { aspect-ratio: 16 / 9; }
+.tool-wide .tool-body { display: flex; flex-direction: column; }
+.tool-wide .badge { margin-top: 0; }
+.tool-wide h3 { font-size: 1.55rem; }
+.tool-wide p.summary { font-size: .98rem; max-width: 44ch; }
+
 /* ── Empty page placeholder (sub-pages, pre-content) ──────────────── */
 .placeholder {
   margin-top: 2.5rem; padding: 4rem 2rem; text-align: center;
@@ -169,6 +180,12 @@ header.masthead p  { margin-top: .7rem; color: var(--muted); font-size: 1.12rem;
 
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; gap: 1.5rem; max-width: 460px; margin-inline: auto; }
+  .tool-wide {
+    grid-template-columns: 1fr; gap: 0; max-width: 460px; margin: 1.5rem auto 0;
+    padding: 1.1rem 1.1rem 1.5rem;
+  }
+  .tool-wide .badge { margin-top: 1.2rem; }
+  .tool-wide h3 { font-size: 1.3rem; }
   header.masthead h1 { font-size: 2.1rem; }
 }
 @media (max-width: 520px) {
